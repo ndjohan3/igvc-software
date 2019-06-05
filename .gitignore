@@ -16,6 +16,7 @@
 /sandbox/ardupilot/config.mk
 
 *~
+*.swp
 
 #Qt Creator
 *.pro.user*
@@ -29,6 +30,30 @@
 #rosdoc_lite
 /doc/
 
+#Speed_compare
+/sandbox/speed_comapare/speed_data.csv
+
 #JetBrains Clion
 */.idea/
 /.idea/
+
+#VSCode
+.vscode
+
+# CMake
+*/cmake-build-*/
+
+#Camera Calibration
+/sandbox/camera_pose_estimation/CMakeFiles
+/sandbox/camera_pose_estimation/CMakeCache.txt
+/sandbox/camera_pose_estimation/cmake_install.cmake
+/sandbox/camera_pose_estimation/Makefile
+/sandbox/camera_pose_estimation/solvepnp
+
+#CNN models
+/sandbox/models/
+
+#generated textures
+/igvc_gazebo/scripts/gen
+#pyc
+*.pyc

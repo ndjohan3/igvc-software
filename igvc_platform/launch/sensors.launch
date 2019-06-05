@@ -1,0 +1,33 @@
+<!-- igvc.launch -->
+<!--
+    This file will launch the default node configuration for
+    a competition run. All sensors, hardware-interface, and generic state nodes are launched here.
+    -->
+<launch>
+    <!-- TF -->
+    <include file="$(find igvc_navigation)/launch/robot_state_publisher.launch" />
+
+    <!-- MOTOR CONTROLLER -->
+    <include file="$(find igvc_platform)/launch/motor_controller.launch" />
+
+    <!-- GPS -->
+    <include file="$(find igvc_platform)/launch/gps.launch" />
+
+    <!-- LEFT, MIDDLE, & RIGHT CAMERAS (Logitech C920) -->
+    <include file="$(find igvc_platform)/launch/camera.launch">
+        <arg name="camera" value="[left,center,right]" />
+    </include>
+
+    <!-- LIDAR -->
+    <include file="$(find igvc_platform)/launch/velodyne_lidar.launch" />
+
+    <!-- Bottom IMU -->
+    <include file="$(find igvc_platform)/launch/imu_bottom.launch" />
+
+    <!-- Top IMU -->
+    <include file="$(find igvc_platform)/launch/imu_top.launch" />
+
+    <!-- System Stats -->
+    <include file="$(find igvc_utils)/launch/system_stats.launch" />
+
+</launch>
